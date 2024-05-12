@@ -10,4 +10,4 @@ https://zhuanlan.zhihu.com/p/107201990
 
 ## todo
 - [x] 实现打字
-- [] 打词组
+- [ ] 打词组
