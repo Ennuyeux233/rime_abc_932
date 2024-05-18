@@ -736,6 +736,15 @@ liquid_keyboard:
   single_width: 60    #single类型的按键宽度
   vertical_gap: 1     #纵向按键间隙
   margin_x: 0.5         #左右按键间隙的1/2
+  fixed_key_bar:  # 固定按键条
+    position: right  # 摆放位置（在滚动区域的……） top|bottom|left|right （上/下/左/右）
+    keys:  # 按键（显示名称为对应的label，不能放太多）
+      - BackSpace  # 退格键（在preset_keys内定义，同下）
+      - liquid_keyboard_switch  # “更多”跳转按键
+      - liquid_keyboard_clipboard  # “剪贴板”跳转按键
+      - space  # 空格键
+      - liquid_keyboard_exit  # 返回键
+      - Return  # 回车键
   keyboards: [history, cn, ascii, math, emoji, clipboard, collection, draft, symbollist, list, ids, symbol, tabs, pinyin, script_symbols, jp, grease, rusa, korea, lation, yinbiao, unit, yanwenzi, combing,  candidate]  #tab列表
   tabs:
     name: 更多
