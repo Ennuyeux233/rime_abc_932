@@ -38,7 +38,7 @@ engine:
     - uniquifier
 
 speller:
-  alphabet: zyxwvutsrqponmlkjihgfedcba.  # 呃，倒背字母表完全是個人喜好
+  alphabet: zyxwvutsrqponmlkjihgfedcba  # 呃，倒背字母表完全是個人喜好
   delimiter: " '"  # 隔音符號用「'」；第一位的空白用來自動插入到音節邊界處
   algebra:  # 拼寫運算規則，這個纔是實現雙拼方案的重點。寫法有很多種，當然也可以把四百多個音節碼一條一條地列舉
     # 这里负责将全拼部分转换成双拼
@@ -144,8 +144,8 @@ speller:
     - xform/(\w),/$1
 
 translator:
-  dictionary: rime_abc_test     # 與【朙月拼音】共用詞典
-  prism: rime_abc_test    # prism 要以本輸入方案的名稱來命名，以免把朙月拼音的拼寫映射表覆蓋掉
+  dictionary: rime_abc_fm     # 
+  prism: rime_abc_fm    # prism 要以本輸入方案的名稱來命名，以免把朙月拼音的拼寫映射表覆蓋掉
   spelling_hints: 3                 # ～字以内候提示编码
   max_phrase_length: 3              # 动态生成词的最大长度
   preedit_format:             # 這段代碼用來將輸入的雙拼碼反轉爲全拼顯示；待見雙拼碼的可以把這段拿掉
