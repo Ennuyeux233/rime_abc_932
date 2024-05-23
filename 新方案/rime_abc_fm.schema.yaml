@@ -50,7 +50,7 @@ speller:
     - xform/^([aoe].*),/O$1,/  # 添上固定的零聲母o，先標記爲大寫O
     - xform/ei,/Q,/            # 替換韻母鍵
     - xform/ian,/W,/           # ※2
-    - xform/er.|iu,/R,/        # 對應兩種韻母的；音節er現在變爲OR了
+    - xform/er,|iu,/R,/        # 對應兩種韻母的；音節er現在變爲OR了
     - xform/[iu]ang,/T,/       # ※1
     - xform/ing,/Y,/
     - xform/uo,/O,/
@@ -63,12 +63,12 @@ speller:
     - xform/an,/J,/            # 如果※2、※3還無有出現在上文中，應該把他們提到本行之前
     - xform/iao,/Z,/           # 對——像這樣讓iao提前出場
     - xform/ao,/K,/
-    - xform/in.|uai,/C,/       # 讓uai提前出場
+    - xform/in,|uai,/C,/       # 讓uai提前出場
     - xform/ai,/L,/
     - xform/ie,/X,/
     - xform/ou,/B,/
     - xform/un,/N,/
-    - xform/[uv]e.|ui,/M,/
+    - xform/[uv]e,|ui,/M,/
 
     #这里负责处理第二位辅码
     - xform/,(\w)([uadgjmpsx])/,$1$2G
