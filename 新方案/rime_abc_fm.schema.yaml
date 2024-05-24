@@ -119,7 +119,7 @@ speller:
     - xlit/QWERTYUIOPASDFGHJKLZXCVBNM/qwertyuiopasdfghjklzxcvbnm/
 
     # 还原第二个字母
-    - xform/(\w)v(\w),/$1u$2/
+    - xform/(\w)v(\w),/$1u$2,/
     - xform/(\w)[bc](\w),/$1a$2,/
     - xform/(\w)[ef](\w),/$1d$2,/
     - xform/(\w)[hi](\w),/$1g$2,/
@@ -130,7 +130,7 @@ speller:
     - xform/(\w)[yz](\w),/$1x$2,/
 
     # 还原第一个字母
-    - xform/v(\w)(\w),/u$1$2/
+    - xform/v(\w)(\w),/u$1$2,/
     - xform/[bc](\w)(\w),/a$1$2,/
     - xform/[ef](\w)(\w),/d$1$2,/
     - xform/[hi](\w)(\w),/g$1$2,/
