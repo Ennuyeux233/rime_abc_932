@@ -8,7 +8,7 @@ schema:
   author:
     - loafonwork 
   description: |
-    朙月拼音＋智能ABC雙拼方案。
+    九宫格＋智能ABC雙拼方案。
 
 switches:
   
