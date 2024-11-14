@@ -1,6 +1,12 @@
 ---
 name: rime_abc_zrm
 version: "2024-05-21"
+import_tables:
+  - cn_dict/base
+  - cn_dict/tencent
+  - cn_dict/others
+  - cn_dict/radical_pinyin
+  - cn_dict/emoji
 ...
 嗯	eng,
 欸	ei,

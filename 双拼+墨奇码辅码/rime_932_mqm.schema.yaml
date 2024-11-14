@@ -2,9 +2,9 @@
 # encoding: utf-8
 
 schema:
-  schema_id: rime_abc_fm  # 專有的方案標識
-  name: rime_abc_fm
-  version: "0.17"
+  schema_id: rime_abc_mqm  # 專有的方案標識
+  name: rime_abc_mqm
+  version: "0.1"
   author:
     - loafonwork 
   description: |
@@ -144,8 +144,8 @@ speller:
     - xform/(\w),/$1
 
 translator:
-  dictionary: rime_abc_zrm     # 
-  prism: rime_abc_zrm    # prism 要以本輸入方案的名稱來命名，以免把朙月拼音的拼寫映射表覆蓋掉
+  dictionary: rime_abc_mqm     #
+  prism: rime_abc_mqm    # prism 要以本輸入方案的名稱來命名，以免把朙月拼音的拼寫映射表覆蓋掉
   spelling_hints: 3                 # ～字以内候提示编码
   max_phrase_length: 3              # 动态生成词的最大长度
   preedit_format:             # 這段代碼用來將輸入的雙拼碼反轉爲全拼顯示；待見雙拼碼的可以把這段拿掉
@@ -299,16 +299,6 @@ translator:
 
     - xlit/QWERTYUIOPASDFGHJKLZXCVBNM/qwertyuiopasdfghjklzxcvbnm/
 
-reverse_lookup:
-  dictionary: stroke
-  enable_completion: true
-  prefix: "`"
-  suffix: "'"
-  tips: 〔筆畫〕
-  preedit_format:
-    - xlit/hspnz/一丨丿丶乙/
-  comment_format:
-    - xform/([nl])v/$1ü/
 
 punctuator:
   import_preset: default
