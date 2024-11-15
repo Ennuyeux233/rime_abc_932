@@ -176,6 +176,7 @@ preset_color_schemes:
   default:
     name: 日间／light
     author: Ennuyeux
+    dark_scheme: dark
     keyboard_back_color: 0xEAEAEE
     text_back_color: 0xEAEAEE
     back_color: 0xEAEAEE
