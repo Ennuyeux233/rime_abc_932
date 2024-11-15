@@ -49,7 +49,7 @@ style:
   layout: #懸浮窗口設置
     position: fixed #位置：left|right|left_up|right_up|fixed|bottom_left|bottom_right|top_left|top_right(left、right需要>=Android5.0)
     min_length: 4 #最小詞長
-    max_length: 14 #超過字數則換行
+    max_length: 3 #超過字數則換行
     sticky_lines: 1 #固頂行數
     sticky_lines_land: 0 #横屏模式下的固顶行数
     max_entries: 5 #最大詞條數
