@@ -20,14 +20,14 @@ height:
 
 #键盘高度
 round_corner:
-  1: &round1 12 #按键圆角半径
+  1: &round1 18 #按键圆角半径
   2: &round2 0 #候选窗口圆角
 
 style:
   auto_caps: false #自動句首大寫:true|false|ascii
   background_dim_amount: 0.5
   candidate_font: han.ttf #候選字型
-  candidate_padding: 5 #候選項內邊距
+  candidate_padding: 10 #候選項內邊距
   candidate_spacing: 1 #候選間距
   candidate_text_size: 22 #候選字號
   candidate_use_cursor: true #高亮候選項
@@ -174,46 +174,66 @@ colors:
 #配色方案
 preset_color_schemes:
   default:
-    name: "标准配色！"  #方案名称
-    author: 风花絮 #作者信息
-    dark_scheme: steam
-    back_color: *color2 #候选区背景状态栏
-    candidate_separator_color: *color2 #候选分割背景
-    candidate_text_color: *color7 #候选文本
-    comment_text_color: *color3 #提示
-    hilited_back_color: *color2 #高亮编码背景
-    hilited_candidate_back_color: *color2 #高亮候选背景
-    hilited_candidate_text_color: *color6 #高亮候选文本
-    hilited_comment_text_color: *color1 #高亮提示
-    hilited_key_back_color: *color6 #高亮按键背景
-    hilited_key_symbol_color: *color2 #高亮按键符号
-    hilited_key_text_color: *color1 #高亮按键文本
-    hilited_off_key_back_color: *color2 #高亮按键关闭状态背景
-    hilited_off_key_text_color: *color1 #高亮按键关闭状态文本
-    hilited_text_color: *color1 #高亮编码
-    key_back_color: *color2 #按键背景
-    key_symbol_color: *color8 #按键符号
-    key_text_color: *color7 #按键文本
-    keyboard_back_color: *color3 #键盘背景
-    label_color: *color6 #标签
-    off_key_back_color: *color4  #按键关闭状态背景
-    off_key_text_color: *color8 #按键关闭状态文本
-    preview_back_color: *color4 #按键提示背景
-    preview_text_color: *color6 #按键提示文本
-    text_color: *color6 #编码
-    text_back_color: *color2 #编码区背景
-    space_bg: *color1 #空格键背景色
-    space_fg: *color7 #空格键文字颜色
-    return_bg: *color_ten #回车键背景色
-    return_fg: *color7 #回车键文字颜色
-    func_bg: *color_ele #功能键背景色
-    func_fg: *color7 #功能键文字颜色
-    dele_bg: *color1 #退格键背景色
-    dele_fg: *color7 #退格键文字颜色
-    code_bg: *color2 #aoeiu背景色
-    code_fg: *color7 #aoeiu文字颜色
-    other_bg: *color9
-    other_fg: *color7
+    name: 日间／light
+    author: Ennuyeux
+    keyboard_back_color: 0xEAEAEE
+    text_back_color: 0xEAEAEE
+    back_color: 0xEAEAEE
+    text_color: 0x32CE9A
+    label_color: 0x000000
+    hilited_back_color: 0xffffff
+    hilited_text_color: 0x000000
+    hilited_candidate_back_color: 0xffffff
+    hilited_candidate_text_color: 0x32CE9A
+    hilited_comment_text_color: 0x000000
+    candidate_separator_color: 0x000000
+    candidate_text_color: 0x000000
+    comment_text_color: 0x000000
+    key_back_color: 0xffffff
+    key_text_color: 0x000000
+    key_symbol_color: 0xA9A9AD
+    hilited_key_back_color: 0xC8C8C8
+    hilited_key_text_color: 0x000000
+    hilited_key_symbol_color: 0xA9A9AD
+    preview_back_color: 0xffffff
+    preview_text_color: 0xA9A9AD
+    benter: 0xBEC1CA
+    tenter: 0x000000
+    bgn: 0xBEC1CA
+    tgn: 0x000000
+    bbs: 0xBEC1CA
+    tbs: 0x000000
+
+  dark:
+    name: 夜间／night
+    author: Ennuyeux
+    keyboard_back_color: 0x363135
+    text_back_color: 0x363135
+    back_color: 0x363135
+    text_color: 0x32CE9A
+    label_color: 0xffffff
+    hilited_back_color: 0x6C696C
+    hilited_text_color: 0xffffff
+    hilited_candidate_back_color: 0x6C696C
+    hilited_candidate_text_color: 0x32CE9A
+    hilited_comment_text_color: 0xffffff
+    candidate_separator_color: 0xffffff
+    candidate_text_color: 0xffffff
+    comment_text_color: 0xffffff
+    key_back_color: 0x6C696C
+    key_text_color: 0xffffff
+    key_symbol_color: 0xffffff
+    hilited_key_back_color: 0x4A474A
+    hilited_key_text_color: 0xffffff
+    hilited_key_symbol_color: 0xffffff
+    preview_back_color: 0x4A474A
+    preview_text_color: 0xffffff
+    benter: 0x4A474A
+    tenter: 0xffffff
+    bgn: 0x4A474A
+    tgn: 0xffffff
+    bbs: 0x4A474A
+    tbs: 0xffffff
 
 
   aqua:
@@ -1041,32 +1061,32 @@ preset_keyboards:
     lock: true #切換程序時記憶鍵盤
     reset_ascii_mode: true
     keys:
-      - {label: '，', click: '，', long_click: '',width: 17, key_back_color: other_bg, key_text_color: other_fg }
-      - {label: 'uv', click: 'u', swipe_up: 1, label_symbol: '1', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {label: 'abc', click: 'a', swipe_up: 2, label_symbol: '2', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {label: 'def', click: 'd', swipe_up: 3, label_symbol: '3', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: BackSpace1, width: 17, key_back_color: dele_bg, key_text_color: dele_fg }
+      - {label: '，', click: '，', long_click: '',width: 17, key_back_color: bgn, key_text_color: tgn }
+      - {label: 'uv', click: 'u', swipe_up: 1, label_symbol: '1', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {label: 'abc', click: 'a', swipe_up: 2, label_symbol: '2', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {label: 'def', click: 'd', swipe_up: 3, label_symbol: '3', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: BackSpace1, width: 17, key_back_color: bbs, key_text_color: tbs }
 
-      - {label: '。', click: '。', long_click: '',width: 17, key_back_color: other_bg, key_text_color: other_fg }
-      - {label: 'ghi', click: 'g', swipe_up: 4, label_symbol: '4', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {label: 'jkl', click: 'j', swipe_up: 5, label_symbol: '5', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {label: 'mno', click: 'm', swipe_up: 6, label_symbol: '6', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Keyboard_number, label: '123', long_click: Keyboard_edit, width: 17, key_back_color: func_bg, key_text_color: func_fg }
+      - {label: '。', click: '。', long_click: '',width: 17, key_back_color: bgn, key_text_color: tgn }
+      - {label: 'ghi', click: 'g', swipe_up: 4, label_symbol: '4', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {label: 'jkl', click: 'j', swipe_up: 5, label_symbol: '5', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {label: 'mno', click: 'm', swipe_up: 6, label_symbol: '6', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Keyboard_number, label: '123', long_click: Keyboard_edit, width: 17, key_back_color: bgn, key_text_color: tgn }
 
-      - {label: '？', click: '？', long_click: '',width: 17, key_back_color: other_bg, key_text_color: other_fg }
-      - {label: 'pqr', click: 'p', swipe_up: 7, label_symbol: '7', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {label: 'stw', click: 's', swipe_up: 8, label_symbol: '8', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {label: 'xyz', click: 'x', swipe_up: 9, label_symbol: '9', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: liquid_keyboard_switch_cn, width: 17, key_back_color: func_bg, key_text_color: func_fg }
+      - {label: '？', click: '？', long_click: '',width: 17, key_back_color: bgn, key_text_color: tgn }
+      - {label: 'pqr', click: 'p', swipe_up: 7, label_symbol: '7', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {label: 'stw', click: 's', swipe_up: 8, label_symbol: '8', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {label: 'xyz', click: 'x', swipe_up: 9, label_symbol: '9', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: liquid_keyboard_switch_cn, width: 17, key_back_color: bgn, key_text_color: tgn }
 
-      - {label: '！', click: '！', long_click: '',width: 17, key_back_color: other_bg, key_text_color: other_fg }
-      - {label: '', click: space, label_symbol: '0', swipe_left: "Left", swipe_right: "Right", swipe_up: 0, width: 44, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Keyboard_letter, label: 'en', width: 22, key_back_color: func_bg, key_text_color: func_fg }
-      - {click: Return, width: 17, key_back_color: return_bg, key_text_color: return_fg }
+      - {label: '！', click: '！', long_click: '',width: 17, key_back_color: bgn, key_text_color: tgn }
+      - {label: '', click: space, label_symbol: '0', swipe_left: "Left", swipe_right: "Right", swipe_up: 0, width: 44, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Keyboard_letter, label: 'en', width: 22, key_back_color: bgn, key_text_color: tgn }
+      - {click: Return, width: 17, key_back_color: benter, key_text_color: tenter }
 
-      - {click: Menu, width: 17, long_click: '', height: 36, key_back_color: func_bg, key_text_color: func_fg }
+      - {click: Menu, width: 17, long_click: '', height: 36, key_back_color: bgn, key_text_color: tgn }
       - {width: 66}
-      - {click: liquid_keyboard_clipboard, width: 17, key_back_color: func_bg, key_text_color: func_fg }
+      - {click: liquid_keyboard_clipboard, width: 17, key_back_color: bgn, key_text_color: tgn }
   mini:
     name: 精简键盘
     author: "tumuyan"
@@ -1107,46 +1127,46 @@ preset_keyboards:
     lock: true
     reset_ascii_mode: true
     keys:
-      - {click: q, long_click: 1, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: w, long_click: 2, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: e, long_click: 3, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: r, long_click: 4, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: t, long_click: 5, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: y, long_click: 6, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: u, long_click: 7, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: i, long_click: 8, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: o, long_click: 9, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: p, long_click: 0, key_back_color: code_bg, key_text_color: code_fg }
+      - {click: q, long_click: 1, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: w, long_click: 2, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: e, long_click: 3, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: r, long_click: 4, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: t, long_click: 5, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: y, long_click: 6, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: u, long_click: 7, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: i, long_click: 8, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: o, long_click: 9, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: p, long_click: 0, key_back_color: key_back_color, key_text_color: key_text_color }
 
       - {width: 5}
-      - {click: a, long_click: select_all, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: s, long_click: '@', key_back_color: code_bg, key_text_color: code_fg }
-      - {click: d, long_click: '#', key_back_color: code_bg, key_text_color: code_fg }
-      - {click: f, long_click: '$', key_back_color: code_bg, key_text_color: code_fg }
-      - {click: g, long_click: '%', swipe_down: "date_time", key_back_color: code_bg, key_text_color: code_fg }
-      - {click: h, long_click: '!', swipe_down: "+", key_back_color: code_bg, key_text_color: code_fg }
-      - {click: j, long_click: '&', swipe_down: "-", key_back_color: code_bg, key_text_color: code_fg }
-      - {click: k, long_click: '*', swipe_down: "_", key_back_color: code_bg, key_text_color: code_fg }
-      - {click: l, long_click: '(){Left}', swipe_down: "=", key_back_color: code_bg, key_text_color: code_fg }
+      - {click: a, long_click: select_all, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: s, long_click: '@', key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: d, long_click: '#', key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: f, long_click: '$', key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: g, long_click: '%', swipe_down: "date_time", key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: h, long_click: '!', swipe_down: "+", key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: j, long_click: '&', swipe_down: "-", key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: k, long_click: '*', swipe_down: "_", key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: l, long_click: '(){Left}', swipe_down: "=", key_back_color: key_back_color, key_text_color: key_text_color }
       - {width: 5}
 
-      - {click: Shift_L, composing: delimiter, width: 15, key_back_color: other_bg, key_text_color: other_fg }
-      - {click: z, long_click: '`', swipe_down: '[]{Left}', key_back_color: code_bg, key_text_color: code_fg }
-      - {click: x, long_click: cut, swipe_down: '{}{Left}', key_back_color: code_bg, key_text_color: code_fg }
-      - {click: c, long_click: copy, swipe_down: ' ', key_back_color: code_bg, key_text_color: code_fg }
-      - {click: v, long_click: paste, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: b, long_click: ";", swipe_down: "\\", key_back_color: code_bg, key_text_color: code_fg }
-      - {click: n, long_click: ":", key_back_color: code_bg, key_text_color: code_fg }
-      - {click: m, long_click: '?', swipe_down: "|", key_back_color: code_bg, key_text_color: code_fg }
-      - {click: BackSpace1, width: 15, key_back_color: dele_bg, key_text_color: dele_fg }
+      - {click: Shift_L, composing: delimiter, width: 15, key_back_color: bgn, key_text_color: tgn }
+      - {click: z, long_click: '`', swipe_down: '[]{Left}', key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: x, long_click: cut, swipe_down: '{}{Left}', key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: c, long_click: copy, swipe_down: ' ', key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: v, long_click: paste, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: b, long_click: ";", swipe_down: "\\", key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: n, long_click: ":", key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: m, long_click: '?', swipe_down: "|", key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: BackSpace1, width: 15, key_back_color: bbs, key_text_color: tbs }
 
-      - {click: Keyboard_number, label: '123', long_click: Menu, width: 12.5, key_back_color: func_bg, key_text_color: func_fg }
-      - {click: liquid_keyboard_switch_en, long_click: Theme_settings, width: 12.5, key_text_size: "18", key_back_color: func_bg, key_text_color: func_fg }
-      - {click: ',', label: '，', long_click: '<>{Left}', key_back_color: other_bg, key_text_color: other_fg }
-      - {label: '______', click: space, long_click: '', swipe_left: "Left", swipe_right: "Right", swipe_up: Keyboard_fbj, width: 30, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: '.', label: '。', long_click: Keyboard_edit, key_back_color: other_bg, key_text_color: other_fg }
-      - {click: Keyboard_default, label: 'cn', key_text_size: "18", key_back_color: func_bg, key_text_color: func_fg }
-      - {click: Return, composing: Return1, swipe_up: Escape, width: 15, key_back_color: return_bg, key_text_color: return_fg }
+      - {click: Keyboard_number, label: '123', long_click: Menu, width: 12.5, key_back_color: bgn, key_text_color: tgn }
+      - {click: liquid_keyboard_switch_en, long_click: Theme_settings, width: 12.5, key_text_size: "18", key_back_color: bgn, key_text_color: tgn }
+      - {click: ',', label: '，', long_click: '<>{Left}', key_back_color: bgn, key_text_color: tgn }
+      - {label: '______', click: space, long_click: '', swipe_left: "Left", swipe_right: "Right", swipe_up: Keyboard_fbj, width: 30, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: '.', label: '。', long_click: Keyboard_edit, key_back_color: bgn, key_text_color: tgn }
+      - {click: Keyboard_default, label: 'cn', key_text_size: "18", key_back_color: bgn, key_text_color: tgn }
+      - {click: Return, composing: Return1, swipe_up: Escape, width: 15, key_back_color: benter, key_text_color: tenter }
   number:
     name: 数字
     author: "暖暖"
@@ -1156,33 +1176,33 @@ preset_keyboards:
     lock: true
     reset_ascii_mode: true
     keys:
-      - {click: '{}{Left}', long_click: '【】{Left}', key_back_color: other_bg, key_text_color: other_fg}
-      - {click: '+', long_click: '#', key_back_color: other_bg, key_text_color: other_fg}
-      - {click: 1, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: 2, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: 3, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: BackSpace1, key_back_color: dele_bg, key_text_color: dele_fg }
+      - {click: '{}{Left}', long_click: '【】{Left}', key_back_color: bgn, key_text_color: tgn}
+      - {click: '+', long_click: '#', key_back_color: bgn, key_text_color: tgn}
+      - {click: 1, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: 2, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: 3, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: BackSpace1, key_back_color: bbs, key_text_color: tbs }
 
-      - {click: '_', long_click: '[]{Left}', key_back_color: other_bg, key_text_color: other_fg}
-      - {click: '-', long_click: '%', key_back_color: other_bg, key_text_color: other_fg}
-      - {click: 4, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: 5, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: 6, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Keyboard_letter, label: 'en', key_back_color: func_bg, key_text_color: func_fg}
+      - {click: '_', long_click: '[]{Left}', key_back_color: bgn, key_text_color: tgn}
+      - {click: '-', long_click: '%', key_back_color: bgn, key_text_color: tgn}
+      - {click: 4, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: 5, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: 6, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Keyboard_letter, label: 'en', key_back_color: bgn, key_text_color: tgn}
 
-      - {click: '(){Left}', long_click: '@', key_back_color: other_bg, key_text_color: other_fg}
-      - {click: '*', long_click: '±', key_back_color: other_bg, key_text_color: other_fg}
-      - {click: 7, long_click: select_all, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: 8, long_click: copy, key_back_color: code_bg, key_text_color: code_fg, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: 9, long_click: paste, swipe_down: paste, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Keyboard_default, label: 'cn', long_click: ':', key_back_color: func_bg, key_text_color: func_fg}
+      - {click: '(){Left}', long_click: '@', key_back_color: bgn, key_text_color: tgn}
+      - {click: '*', long_click: '±', key_back_color: bgn, key_text_color: tgn}
+      - {click: 7, long_click: select_all, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: 8, long_click: copy, key_back_color: key_back_color, key_text_color: key_text_color, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: 9, long_click: paste, swipe_down: paste, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Keyboard_default, label: 'cn', long_click: ':', key_back_color: bgn, key_text_color: tgn}
 
-      - {click: '=', long_click: '≠', key_back_color: other_bg, key_text_color: other_fg}
-      - {click: '/', long_click: '\', key_back_color: other_bg, key_text_color: other_fg}
-      - {click: ., long_click: liquid_keyboard_switch_en, key_back_color: other_bg, key_text_color: other_fg}
-      - {click: 0, long_click: cut, key_back_color: code_bg, key_text_color: code_fg}
-      - {click: Keyboard_edit, key_back_color: func_bg, key_text_color: func_fg}
-      - {click: Return, long_click: Menu, key_back_color: return_bg, key_text_color: return_fg }
+      - {click: '=', long_click: '≠', key_back_color: bgn, key_text_color: tgn}
+      - {click: '/', long_click: '\', key_back_color: bgn, key_text_color: tgn}
+      - {click: ., long_click: liquid_keyboard_switch_en, key_back_color: bgn, key_text_color: tgn}
+      - {click: 0, long_click: cut, key_back_color: key_back_color, key_text_color: key_text_color}
+      - {click: Keyboard_edit, key_back_color: bgn, key_text_color: tgn}
+      - {click: Return, long_click: Menu, key_back_color: benter, key_text_color: tenter }
   edit:
     name: 编辑键盘
     author: "Ennuyeux"
@@ -1192,28 +1212,28 @@ preset_keyboards:
     lock: true #切換程序時記憶鍵盤
     reset_ascii_mode: true
     keys:
-      - {click: '{select_all}', label: '全选', long_click: '',width: 17, height: 60, key_back_color: other_bg, key_text_color: other_fg }
-      - {click: LeftUp, width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Up, width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: RightUp, width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: BackSpace1, width: 17, key_back_color: dele_bg, key_text_color: dele_fg }
+      - {click: '{select_all}', label: '全选', long_click: '',width: 17, height: 60, key_back_color: bgn, key_text_color: tgn }
+      - {click: LeftUp, width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Up, width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: RightUp, width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: BackSpace1, width: 17, key_back_color: bbs, key_text_color: tbs }
 
-      - {click: copy, label: '复制', long_click: '',width: 17, height: 60, key_back_color: other_bg, key_text_color: other_fg }
-      - {click: Left, width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: space, label: ◯, width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Right, width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Keyboard_number, label: '123', width: 17, key_back_color: func_bg, key_text_color: func_fg }
+      - {click: copy, label: '复制', long_click: '',width: 17, height: 60, key_back_color: bgn, key_text_color: tgn }
+      - {click: Left, width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: space, label: ◯, width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Right, width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Keyboard_number, label: '123', width: 17, key_back_color: bgn, key_text_color: tgn }
 
-      - {click: paste, label: '粘贴', long_click: '',width: 17, height: 60, key_back_color: other_bg, key_text_color: other_fg }
-      - {click: LeftDown, width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Down, width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: RightDown, width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Keyboard_letter, label: 'en', width: 17, key_back_color: func_bg, key_text_color: func_fg }
+      - {click: paste, label: '粘贴', long_click: '',width: 17, height: 60, key_back_color: bgn, key_text_color: tgn }
+      - {click: LeftDown, width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Down, width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: RightDown, width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Keyboard_letter, label: 'en', width: 17, key_back_color: bgn, key_text_color: tgn }
 
-      - {click: Home, long_click: End, label: '行首', label_symbol: '行尾' , width: 17, height: 60, key_back_color: other_bg, key_text_color: other_fg }
-      - {click: undo, label: '↩︎', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: redo, label: '↪︎', width: 22, key_back_color: code_bg, key_text_color: code_fg }
-      - {click: Keyboard_default, label: 'cn', width: 22, key_back_color: func_bg, key_text_color: func_fg }
-      - {click: Return, width: 17, key_back_color: return_bg, key_text_color: return_fg }
+      - {click: Home, long_click: End, label: '行首', label_symbol: '行尾' , width: 17, height: 60, key_back_color: bgn, key_text_color: tgn }
+      - {click: undo, label: '↩︎', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: redo, label: '↪︎', width: 22, key_back_color: key_back_color, key_text_color: key_text_color }
+      - {click: Keyboard_default, label: 'cn', width: 22, key_back_color: bgn, key_text_color: tgn }
+      - {click: Return, width: 17, key_back_color: benter, key_text_color: tenter }
 
 
